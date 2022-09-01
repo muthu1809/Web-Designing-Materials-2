@@ -1,0 +1,188 @@
+
+Vector Graphics: 
+
+Vector Graphics: 
+
+Images should not pixelate when we zoom them.  
+
+Two Types of Images: 
+1. Raster Images
+2. Vector Images
+
+Raster Images: 
+Raster images are defined using a grid of pixels. 
+Eg. .bmp, .png, .jpg, .gif
+
+Vector Images: 
+SVG[Scalable Vector Graphics] Format Images (.svg). 
+It is an XML-based language for describing vector images
+SVG: 
+Scalable Vector Graphics - 2D vector image
+
+XMLஐ அடிப்படையாகக் கொண்டது.  
+Vector Graphicsக்கும் மற்ற படங்களுக்கும் [jpg, png] என்ன வேறுபாடு?
+SVGஐ CSS கொண்டு அழகுபடுத்த முடியும்.  ஜாவாஸ்கிரிப்ட் கொண்டு மெருகூட்ட[Interactive] முடியும் .  இதற்குத் தேவையான SVG tagsஐ HTMLஇல் சேர்க்க முடியும்.  
+
+
+
+
+https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vector versus raster</title>
+  </head>
+  <body>
+    <h1>Vector versus raster</h1>
+
+    <img src="star.png" alt="A raster star">
+    <img src="star.svg" alt="A vector star">
+  </body>
+</html>
+
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="8" fill="red" />
+</svg>
+
+<svg width="400" height="100">
+  <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(123,0,0)" />
+</svg>
+
+<svg width="400" height="180"> 
+  <rect x="120" y="120" width="60" height="60" rx="15"  ry="15"/>
+  <rect x="220" y="120" width="60" height="60" rx="150" ry="15"/>
+  <rect x="320" y="120" width="60" height="60" rx="150" ry="150"/>
+</svg>
+
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+HTML Block and Inline Elements: 
+Block elements எப்போதும் புது வரியில் தொடங்கும். 
+எ.கா. <p> <div> 
+<p> I am a block element and will start in new line
+<div> I am a block element and will start in new line
+
+Inline Elements புது வரியில் தொடங்கா.  
+எ.கா. <span> 
+I am an Inline Element <span> and will not start in new line. </span> 
+
+<p>I like <span style="color:red">red</span> color</p> 
+
+Web Form: 
+ஒரு பயனர், இணையத்தளம் ஒன்றிற்கு அனுப்புகின்ற தரவுகள் 
+
+
+
+
+HTML <input> Tag: 
+
+ <form >
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<form action="/action_page.php">
+
+Browse கொடுத்து 
+
+accept: 
+------
+
+<p>
+  <label for="soundFile">Select an audio file:</label>
+  <input type="file" id="soundFile" accept="audio/*">
+</p>
+<p>
+  <label for="videoFile">Select a video file:</label>
+  <input type="file" id="videoFile" accept="video/*">
+</p>
+<p>
+  <label for="imageFile">Select some images:</label>
+  <input type="file" id="imageFile" accept="image/*" multiple>
+</p>
+
+alt: 
+----
+
+
+<form action="/index.jsp">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+  <input type="image" src="submit.gif" alt="ok" width="48" height="48">
+</form>
+
+autocomplete: 
+-----------
+
+<form action="/index.jsp" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" autocomplete="off"><br><br>
+  <input type="submit">
+</form> 
+
+autofocus: 
+---------
+<form action="/index.jsp" autocomplete="on">
+<label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" autofocus><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit">
+</form>
+
+
+Radio Buttons: 
+<input type="radio" id="html" name="fav_language" value="HTML"> HTML
+<label for="html"><h2>HTML</h2></label>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css"><h2>CSS</h2></label>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript"><h2>JavaScript</h2></label> 
+
+
+Input Box - Password: 
+
+  <input type="text" id="fname" name="fname" value="Kathir"><br>
+  <label for="lname"><h3>Password:</h3></label><br>
+  <input type="password" id="lname" name="lname" value="Kumaran"><br><br>
+
+Input Box - Max length: 
+ <form>
+  <label for="mobile">Mobile Number:</label>
+  <input type="text" id="mobileno" name="mobile" maxlength="10"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+	
+
+
+Drop Down / Select Box
+
+	<label for="courses"><h2>Choose Course</h2></label>
+
+	<!--<select id="courses" name="courses">-->
+	<!--<select id="courses" name="courses" size="3">-->
+<select id="courses" name="courses" size="4" multiple>
+  <option value="java"  >Java </option>
+  <option value="python" selected>Python</option>
+  <option value="ruby">Ruby</option>
+  <option value=".net">.NET</option>
+</select> 
+
