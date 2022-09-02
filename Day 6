@@ -1,0 +1,170 @@
+Web Form: 
+ஒரு பயனர், இணையத்தளம் ஒன்றிற்கு அனுப்புகின்ற தரவுகள் 
+
+
+HTML <input> Tag: 
+
+ <form >
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+Browse கொடுத்து 
+
+accept: 
+------
+
+<p>
+  <label for="soundFile">Select an audio file:</label>
+  <input type="file" id="soundFile" accept="audio/*">
+</p>
+<p>
+  <label for="videoFile">Select a video file:</label>
+  <input type="file" id="videoFile" accept="video/*">
+</p>
+<p>
+  <label for="imageFile">Select some images:</label>
+  <input type="file" id="imageFile" accept="image/*" multiple>
+</p>
+
+alt: 
+----
+
+
+<form action="/index.jsp">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+  <input type="image" src="submit.gif" alt="ok" width="48" height="48">
+</form>
+
+autocomplete: 
+-----------
+
+<form action="/index.jsp" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" autocomplete="off"><br><br>
+  <input type="submit">
+</form> 
+
+autofocus: 
+---------
+<form action="/index.jsp" autocomplete="on">
+<label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" autofocus><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit">
+</form>
+
+
+
+Radio Buttons: 
+<input type="radio" id="html" name="fav_language" value="HTML"> HTML
+<label for="html"><h2>HTML</h2></label>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css"><h2>CSS</h2></label>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript"><h2>JavaScript</h2></label> 
+
+
+Input Box - Password: 
+
+  <input type="text" id="fname" name="fname" value="Kathir"><br>
+  <label for="lname"><h3>Password:</h3></label><br>
+  <input type="password" id="lname" name="lname" value="Kumaran"><br><br>
+
+Input Box - Max length: 
+ <form>
+  <label for="mobile">Mobile Number:</label>
+  <input type="text" id="mobileno" name="mobile" maxlength="10"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+	
+
+
+Drop Down / Select Box
+
+	<label for="courses"><h2>Choose Course</h2></label>
+
+	<!--<select id="courses" name="courses">-->
+	<!--<select id="courses" name="courses" size="3">-->
+<select id="courses" name="courses" size="4" multiple>
+  <option value="java"  >Java </option>
+  <option value="python" selected>Python</option>
+  <option value="ruby">Ruby</option>
+  <option value=".net">.NET</option>
+</select> 
+
+Input - Button: 
+--------------
+<input class="favorite styled"
+       type="button"
+       value="Add to favorites">
+
+இப்போது input type = "button" என்பதற்குப் பதிலாக, button tagஐயே பயன்படுத்துகிறார்கள்.  
+<button class="favorite styled"
+        type="button">
+    Add to favorites
+</button>
+
+Keyboard Shortcuts to Buttons: 
+<input type="button" value="Start machine" accesskey="s">
+
+குறிப்பு: 
+    Edge, IE, Chrome, Safari, Opera 15+: [ALT] + accesskey
+    Firefox: [ALT] [SHIFT] + accesskey
+
+button ஐ disabled ஆக்குவது எப்படி?
+<input type="button" value="Disable me" disabled>
+
+datalist: 
+--------
+recommended options கொடுக்கப் பயன்படும்;
+
+<label for="sweet-choice">Choose a flavor:</label>
+<input list="sweet-flavors" id="sweet-choice" name="sweet-choice" />
+
+<datalist id="sweet-flavors">
+    <option value="லட்டு">
+    <option value="ஜிலேபி">
+    <option value="ஜாங்கிரி">
+    <option value="மைசூர்பாகு">
+    <option value="பாதுஷா">
+</datalist>
+
+range: 
+---------
+<input type="range" list="tickmarks">
+<datalist id="tickmarks">
+  <option value="0">
+  <option value="10">
+  <option value="20">
+  <option value="30">
+</datalist>
+
+color: 
+--------
+<input type="color" list="redColors">
+<datalist id="redColors">
+  <option value="#800000">
+  <option value="#8B0000">
+  <option value="#A52A2A">
+  <option value="#DC143C">
+</datalist>
+
+progress: 
+---------
+<label for="file">Java</label>
+<progress id="file" max="100" value="70"> 70% </progress> <br>
+<label for="file">Html</label>
+<progress id="file" max="100" value="80"> 80% </progress>
+
+
