@@ -1,0 +1,199 @@
+4.3. CSS [attribute^="value"] Selector
+-----------
+class^ ---> starts with specified value
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[class^="abc"] {
+  background: pink;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS [attribute^="abcd"] Selector</h1>
+
+<p class="abcd">ஊருக்குதான் நீ பயந்தாலே வேலைக்கு ஆவாதே </p>
+<h1 class="bcde-123"> யாருக்குமே நீ அடங்காதே வெற்றிய விடாதே</h1>
+<p class="abcdefgh">ரெண்டுல ஒன்னு பாக்கலான் நிக்கிறியா தெம்பா</p>
+
+</body>
+</html>
+
+4.4. CSS [attribute$="value"] Selector
+--------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class$="xyz"] {
+  background: pink;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute$="value"] Selector</h2>
+
+<div class="abc_xyz">ரிஸ்க் எடுக்கறதெல்லாம் ரஸ்க் சாப்பிடறது மாதிரி</div>
+<div class="abc">வேணா வலிக்குது அழுதுறுவேன்.</div>
+<div class="stuvwxyz">நான் அப்டியே ஷாக் ஆயிட்டேன்</div>
+<p class="abc-xyz">எந்த ஒரு விசயத்தையும் பிளான் பண்ணாம பண்ணா இப்படித்தான்!  பிளான் பண்ணி பண்ணனும்</p>
+
+</body>
+</html>
+
+4.5. CSS [attribute*="value"] Selector
+---------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class*="xy"] {
+  background: pink;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute*="value"] Selector</h2>
+
+<div class="abc_xyz_1">ரிஸ்க் எடுக்கறதெல்லாம் ரஸ்க் சாப்பிடறது மாதிரி</div>
+<div class="xyabz">வேணா வலிக்குது அழுதுறுவேன்.</div>
+<div class="stuvwxyz_">நான் அப்டியே ஷாக் ஆயிட்டேன்</div>
+<p class="aby-xz">எந்த ஒரு விசயத்தையும் பிளான் பண்ணாம பண்ணா இப்படித்தான்!  பிளான் பண்ணி பண்ணனும்</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class*="xy"] {
+  background: pink;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute$="value"] Selector</h2>
+
+<div class="abc_xyz_1">ரிஸ்க் எடுக்கறதெல்லாம் ரஸ்க் சாப்பிடறது மாதிரி</div>
+<div class="xyabz">வேணா வலிக்குது அழுதுறுவேன்.</div>
+<div class="stuvwxyz_">நான் அப்டியே ஷாக் ஆயிட்டேன்</div>
+<p class="aby-xz">எந்த ஒரு விசயத்தையும் பிளான் பண்ணாம பண்ணா இப்படித்தான்!  பிளான் பண்ணி பண்ணனும்</p>
+
+</body>
+</html>
+
+CSS Combinators: 
+----------------
+5.1 Descendant Selector
+-----------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>Descendant Selector</h2>
+<div>
+  <p>நான் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும்.  </p>
+  <p>நானும் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும். </p>
+  <section><p>நானும் தான் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும்.</p></section>
+</div>
+
+<p>நான் pஇல் மட்டும் தான்  இருக்கிறேன்.  எனவே எனக்கு style பொருந்தாது. </p>
+<p>நான் pஇல் மட்டும் தான்  இருக்கிறேன்.  எனவே எனக்கு style பொருந்தாது.</p>
+
+</body>
+</html>
+
+5.2. Child Selector (>) 
+----------------------
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div > p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>Descendant Selector</h2>
+<div>
+  <p>நான் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும்.  </p>
+  <p>நானும் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும். </p>
+  <section><p>நானும் தான் p, div இரண்டிற்குள்ளும் இருக்கிறேன். ஆனால், sectionகுள் இருக்கிறேன்.   style பொருந்தாது.</p></section>
+</div>
+
+<p>நான் pஇல் மட்டும் தான்  இருக்கிறேன்.  எனவே எனக்கு style பொருந்தாது. </p>
+<p>நான் pஇல் மட்டும் தான்  இருக்கிறேன்.  எனவே எனக்கு style பொருந்தாது.</p>
+
+</body>
+</html>
+
+5.3. nth of type selectors:
+--------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/* Selects the second element of div siblings */
+div:nth-of-type(2) {
+  background: red;
+  color: yellow;
+}
+
+/* Selects the second li element in a list */
+li:nth-of-type(2) {
+  background: lightgreen;
+  color: red;
+}
+
+/* Selects every third element among any group of siblings */
+:nth-of-type(3) {
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>நம்பிக்கையே நல்லது</p>
+</div>
+
+<div>
+<p>எறும்புக்கும் வாழ்க்கை உள்ளது</p>
+</div>
+
+<div>
+<p>பெருந்தலைகள்</p>
+</div>
+
+<ul>
+  <li>ரிச்சர்டு ஸ்டால்மேன்</li>
+  <li>முத்து அண்ணாமலை</li>
+  <li>லினஸ் டார்வால்ட்ஸ்</li>
+  <li>டென்னிஸ் ரிட்சி</li>
+  <li>ஜிம்மி வேல்ஸ்</li>
+</ul>
+
+</body>
+</html>
+
+--------------------------------
