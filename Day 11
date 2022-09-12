@@ -1,0 +1,243 @@
+Divisions: 
+
+<html>
+<head> 
+<html>
+<head> 
+<link rel="stylesheet" href="styles/style1.css"> 
+</head> 
+<body> <div>பத்தாவது முறை விழுந்தவனை முத்தமிட்டுச் சொன்னது பூமி - ஒன்பது முறை எழுந்தவன் அல்லவா நீ!  - ஈரோடு தமிழன்பன் </div>
+</body> 
+</html> 
+
+style1.css
+----------
+div {width:60%; height: 40%; border: 3px solid red; }
+
+இதே style.css கோப்பில் margin சேர்த்து வேறுபாட்டைக் கவனிக்கவும். 
+
+div {width:60%; height: 40%; border: 3px solid red; margin:25px; } 
+
+padding: உள்ளே இருக்கும் contentக்கும் இடைவெளி கொடுக்கும்.  
+style1.css
+
+div {width:60%; height: 40%; border: 3px solid red; margin:25px;padding: 25px; }
+
+Body background: 
+index.html: 
+<html>
+<head> 
+<html>
+<head> 
+<link rel="stylesheet" href="styles/style1.css"> 
+</head> 
+<body> <div>பத்தாவது முறை விழுந்தவனை முத்தமிட்டுச் சொன்னது பூமி - ஒன்பது முறை எழுந்தவன் அல்லவா நீ!  - ஈரோடு தமிழன்பன் </div>
+</body> 
+</html> 
+
+style1.css:
+body {background-color: skyblue;}
+
+படத்தைச் சேர்ப்பது எப்படி?
+body {background-image: url("../linux.jpeg");}
+
+body {
+background-image: url("../linux.jpeg");
+background-repeat: repeat-x;
+}
+
+body {
+background-image: url("../linux.jpeg");
+background-repeat: no-repeat;
+}
+
+body {
+background-image: url("../linux.jpeg");
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+POSITIONING: 
+index.html: 
+----------
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles/style1.css"> 
+</style>
+</head>
+<body>
+
+<h2>position: static;</h2>
+<body> <div class="static">பத்தாவது முறை விழுந்தவனை முத்தமிட்டுச் சொன்னது பூமி - ஒன்பது முறை எழுந்தவன் அல்லவா நீ!  - ஈரோடு தமிழன்பன் </div>
+</body> 
+</html> 
+
+style1.css:
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+
+style1.css:
+ div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+
+sticky
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span {
+  color: red;
+  border: 1px solid black;
+}
+
+.extra span {
+  color: inherit;
+}
+</style>
+</head>
+<body>
+
+<div>
+  Here is <span>a span element</span> which is red, as it is span element
+</div>
+
+<div class="extra" style="color:blue">
+  Here is <span>a span element</span> which is blue, because it inherits from its parent.
+</div>
+
+<div style="color:red">
+  Here is <span>a span element</span> which is red, as it is span element
+</div>
+
+</body>
+</html>
+
+----------
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  color: red;
+  border: 1px solid blue; 
+}
+
+h1 {
+  color: initial; 
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1 align="center">தலைப்பு</h1>
+  <p>தலைப்பின் நிறம் என்ன?  இந்தப் பத்தியின் நிறம் என்ன?  ஏன் இரண்டும் வெவ்வேறு?  initial property தான் காரணம்.  புரிகிறதா?.</p>
+</div>
+</body>
+</html>
+
+------------
+revert property: 
+.பெற்றோர் {
+  color: blue;
+}
+p {
+  color: red;
+}
+.மாற்று {
+  color: revert;
+}
+
+<html>
+<head>
+<link rel="stylesheet" href="styles/style1.css">
+</head>
+<body>
+<div class="பெற்றோர்">
+  <p>சி மொழியைக் கண்டுபிடித்தவர் டென்னிஸ் ரிச்சி</p>
+  <p class="மாற்று">எழில் மொழியைக் கண்டுபிடித்தவர் முத்து</p>
+</div>
+</body>
+</html>
+
+---------------
+
+CSS - Source Order: 
+
+home.html: 
+<html>
+<head> 
+<link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">1</div></div>
+
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">2</div></div>
+
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">3</div></div>
+
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">4</div></div>
+
+</body>
+
+</html>
+
+style1.css: 
+
+div.one {margin:5px; padding:5px; border:1px; solid red; float:left; text-align:center;} 
+div.one img { display:inline; margin: 5px; border:1px solid yellow; width:170px; height:150px;}
+div.one a:hover img{border:1px solid blue;}
+div.two {text-align:center; font-weight:normal; width:120px; margin:5px;}
+
+Opacity: 
+<html>
+<head> 
+<link rel="stylesheet" href="styles/style1.css"> 
+</head>
+<body>
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">1</div></div>
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">2</div></div>
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">3</div></div>
+<div class="one"> <a target="_blank" href="rabbit.jpeg"><img src="rabbit.jpeg"></a> <div class="two">4</div></div>
+</body>
+</html>
+
+style1.css
+-------------
+
+div.one {margin:5px; padding:5px; border:1px; solid red; float:left; text-align:center;} 
+
+div.one img { display:inline; margin: 5px; border:1px solid yellow; width:170px; height:150px; opacity: 0.4; filter:alpha(opacity=40);}
+
+div.one a:hover img{border:1px solid blue;opacity: 1; filter:alpha(opacity=100);}
+
+div.two {text-align:center; font-weight:normal; width:120px; margin:5px;}
+
+
+
+
+
+
+
