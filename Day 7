@@ -22,6 +22,8 @@ How To Define Style for HTML Elements:
 1. In line
 <h1 style="color:red"> வணக்கம் <h1> 
 
+color:red --> இது தான் rule set. 
+
 2. By Using Style Tag: 
 <html>
 <head>
@@ -48,6 +50,8 @@ index.html:
 </head>
 <h1> Vanakkam </h1> 
 
+இங்கே rel என்பது relationship
+
 Basic Structure of CSS File:
 ============================
 tagname{
@@ -55,6 +59,8 @@ tagname{
    }
 eg: 
 h1{color:red;}
+
+property:value; சேர்ந்தது தான் Rule set. 
 
 CSS Fileஐ HTML கோப்புடன் link tag மூலம் இணைக்கலாம்.  
 
@@ -69,6 +75,43 @@ h1 {
 p {
     color: black;
 }
+
+em - px வேறுபாடு என்ன?
+
+style1.css:
+----------
+body{ font-size: 10px;}
+.px{ font-size: 15px; }
+.em{ font-size: 2.5em; }
+
+
+In pixels things are absolute (no matter where you place it, always same result):
+index.html:
+----------
+<div class="px">
+    This text is exactly 15 pixels
+    <div class="px">
+        This text is exactly 15 pixels
+        <div class="px">
+            This text is exactly 15 pixels
+         </div>
+    </div>
+</div>
+
+Em is relative, it depends on other elements' values:
+
+<div class="em">
+    This text is 2.5 times larger than it's parent -> 25px
+    <div class="em">
+        This text is 2.5 times larger than it's parent -> 62.5px
+        <div class="em">
+            This text is 2.5 times larger than it's parent -> 156.25px
+         </div>
+    </div>
+</div>
+
+
+https://webmasters.stackexchange.com/questions/88017/difference-between-px-and-em-in-html5
 
 Multiple Property Values: 
 style1.css
@@ -120,6 +163,8 @@ p {
 </body>
 </html>
 
+text-align: center; /* justify; left; right */ 
+
 1. ID Selector: 
 index.html: 
 -----------
@@ -135,9 +180,9 @@ index.html:
 </style>
 </head>
 <body>
-<p id="para1">நான் மாறியிருக்கிறேனா?</p>
-<p>நான் மாறவில்லையா?</p>
-​</body>
+<p id="para1">நான் நடுவில் இருக்கிறேன் - நீலவண்ணம் </p>
+<p>நான் அப்படியே இருக்கிறேன் </p>
+</body>
 </html>
 குறிப்பு: id எண்ணில் தொடங்கக் கூடாது.  
 
