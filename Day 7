@@ -390,27 +390,6 @@ class^ ---> starts with specified value
 </html>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-[class*="xy"] {
-  background: pink;
-}
-</style>
-</head>
-<body>
-
-<h2>CSS [attribute$="value"] Selector</h2>
-
-<div class="abc_xyz_1">ரிஸ்க் எடுக்கறதெல்லாம் ரஸ்க் சாப்பிடறது மாதிரி</div>
-<div class="xyabz">வேணா வலிக்குது அழுதுறுவேன்.</div>
-<div class="stuvwxyz_">நான் அப்டியே ஷாக் ஆயிட்டேன்</div>
-<p class="aby-xz">எந்த ஒரு விசயத்தையும் பிளான் பண்ணாம பண்ணா இப்படித்தான்!  பிளான் பண்ணி பண்ணனும்</p>
-
-</body>
-</html>
-
 CSS Combinators: 
 ----------------
 5.1 Descendant Selector
