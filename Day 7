@@ -318,30 +318,6 @@ a[target] {
 </html>
 
 
-4.2. CSS Attribute Selector
-| கொடுத்திருக்கும் classஐ அப்படியே தேடும், இல்லை, - உடன் தேடும்.  
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-[class|=top] {
-  background: yellow;
-}
-</style>
-</head>
-<body>
-
-<h2>CSS [attribute|="value"] Selector</h2>
-
-<h1 class="top-header">கனவா கனவா</h1>
-<p class="top-text">நான் காண்பது கனவா</p>
-<p class="topcontent">என் கண் முன்னே கடவுள் துகளா</p>
-
-</body>
-</html>
-
-
 4.3. CSS [attribute^="value"] Selector
 -----------
 class^ ---> starts with specified value
