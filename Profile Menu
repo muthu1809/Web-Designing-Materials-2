@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+
+.navbar
+{
+background-color:grey; 
+display:flex; 
+justify-content:space-between;
+padding: 20px; 
+}
+.name
+{
+color: white; 
+font-size: 2em; 
+font-family: 'Arial',sans-serif;
+}
+a
+{
+text-decoration:None;
+color: lightgrey;
+}
+a:hover
+{
+color: orange;
+}
+</style>
+<body>
+
+
+<nav class="navbar">
+<div class="name"> Ajay </div>
+<div class="menu">
+    <a href="#"> Home </a>
+    <a href="#"> Projects </a>
+    <a href="#"> About Us </a>
+    <a href="#"> Contact </a>
+</div>
+</nav>
+
+
+</body>
+</html>
