@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+.tdc
+{
+display:flex; 
+justify-content:space-between; 
+align-items:justify;
+}
+</style>
+</head>
+<body>
+<h1> TODO List </h1>
+<div id="todo-list"> </div>
+<input type="text" id="todo_item"> 
+<script>
+document.getElementById("todo_item").addEventListener("keydown", 
+function(event)
+{
+if(event.key=="Enter")
+    {
+     const todo_item =   document.getElementById("todo_item").value; 
+     const pa =   document.createElement("para"); 
+     pa.textContent = todo_item; //Washing
+if(todo_item!=""){
+    const delete_button = document.createElement("span");
+    delete_button.textContent = ' X ';
+    delete_button.style.color = "red";
+     delete_button.cursor = "Pointer";
+
+    delete_button.addEventListener("click",function()
+{
+        this.parentElement.remove(); 
+}
+);
+
+     const next_line = document.createElement("br");
+
+     const todo_container = document.createElement("div");
+    todo_container.className = "tdc";
+    todo_container.appendChild(pa); 
+    todo_container.appendChild(delete_button); 
+    todo_container.appendChild(next_line); 
+
+    document.getElementById("todo-list").appendChild(todo_container);
+    document.getElementById("todo_item").value = "";
+    }
+}
+}
+
+);
+
+</script>
+
+
+
+</html>
