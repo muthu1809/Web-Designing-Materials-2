@@ -1,0 +1,81 @@
+<html>
+<head>
+<style>
+.chat-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+input[type="text"] {
+    width: 500px; 
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.message {
+    width: 60%;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.message li {
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* message முழுவரியையும் எடுப்பதற்கு */
+    width: 80%; 
+}
+.friend1, .friend2 {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<h2> Chat </h2>
+<div class="chat-container">
+    <div class="friend1">
+        <h2> Friend 1 </h2>
+        <img src="1.jpeg" width="500px" height="400px">
+        <input type="text" id="i1" onkeyup="send_message(event, 'i1')">
+    </div>
+    <ul class="message" id="chat-messages"></ul>
+    <div class="friend2">
+        <h2> Friend 2 </h2>
+        <img src="2.jpeg" width="500px" height="400px">
+    <input type="text" id="i2" onkeyup="send_message(event, 'i2')">     
+    </div>
+</div>
+
+<script>
+function send_message(event, inputId) {
+    let msg = document.getElementById(inputId).value;
+    let element = document.createElement("li");
+
+    
+    if ((msg !== "") && (event === null || event.key === "Enter")) {
+        let text = document.createTextNode(msg);
+        element.appendChild(text);
+        let messageList = document.getElementById("chat-messages");
+        messageList.appendChild(element);
+
+/* நிறம், இடத்தை மாற்றுவதற்கு */
+        if (inputId === "i1") {
+            element.style.color = "blue"; 
+            element.style.textAlign = "left"; 
+        } else {
+            element.style.color = "red"; 
+            element.style.textAlign = "right"; 
+        }
+
+        document.getElementById(inputId).value = ""; 
+    }
+}
+
+
+</script>
+</body>
+</html>
